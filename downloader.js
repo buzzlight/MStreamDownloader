@@ -107,7 +107,7 @@ async function downloadVideo(videoUrls, email, password, outputDirectory) {
    const browser = await puppeteer.launch({
        // Switch to false if you need to login interactively
        headless: true,
-       args: ['--disable-dev-shm-usage', '--lang=it-IT']
+       args: ['--disable-dev-shm-usage', '--lang=it-IT', '--no-sandbox', '--disable-setuid-sandbox']
    });
 
    const page = await browser.newPage();
